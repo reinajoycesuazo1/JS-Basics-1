@@ -1,14 +1,14 @@
 const elementTxt = document.getElementById("elements");
 const sumTxt = document.getElementById("sum");
+const numTxt = document.getElementById("num");
 
-let arr = [];
-let sum = 0;
+function Calculate(){
+    let arr = [
+        parseFloat(numTxt.value) ];
+        let sum = 0;
 
-arr.push(23);
-arr.push(55);
-arr.push(10);
-arr.push(90);
-arr.push(18);
+        arr.push(numTxt.value);
+}
 
 for(let i=0; i<arr.length; i++ ) {
     sum += arr[i];
@@ -17,3 +17,9 @@ for(let i=0; i<arr.length; i++ ) {
 elementTxt.innerHTML = arr.join("<br>");
 sumTxt.innerHTML = sum;
 console.log(arr);
+}
+
+function clearEntries(){
+    numTxt.value ="";
+    resultTxt.innerHTML = "";
+}
